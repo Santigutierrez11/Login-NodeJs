@@ -73,14 +73,14 @@ app.post('/auth', async (req, res) => {
             }else {
                 req.session.loggedin = true;
                 req.session.name = results[0].name;
-                res.render('', {
+                res.render('login', {
                     alert: true,
                     alertTitle: "Bienvenido",
                     alertMessage: "Login Correcto",
                     alertIcon: "success",
                     showConfirmButton: true,
                     timer: 2000,
-                    ruta: ''
+                    ruta: '/'
                 });
             }
         });
